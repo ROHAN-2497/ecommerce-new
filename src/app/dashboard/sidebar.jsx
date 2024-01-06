@@ -2,28 +2,32 @@ import Link from "next/link";
 import React from "react";
 const navLinks = [
   {
-    Path: "/dashboard",
+    path: "/dashboard",
     title: "DashBoard",
   },
   {
-    Path: "/dashboard/addproduct",
+    path: "/dashboard/add-product",
     title: "Add product",
   },
   {
-    Path: "/dashboard/manageproduct",
+    path: "/dashboard/manage-product",
     title: "Manage product",
+  },
+  {
+    path: "/",
+    title: "Home",
   },
 ];
 const SideBar = () => {
   return (
-    <aside>
-      <h1>DashBoard</h1>
-      <ul>
-        {
-            navLinks.map(({path, title}) => <li key={path}>
-                <Link href={path}>{title}</Link>
-            </li>)
-        }
+    <aside className="mr-10">
+      <h1 className="text-3xl font-semibold">DashBoard</h1>
+      <ul className="">
+        {navLinks.map(({ path, title }) => (
+          <li key={path}>
+          <Link href={path}>{title}</Link>
+        </li>
+        ))}
       </ul>
     </aside>
   );

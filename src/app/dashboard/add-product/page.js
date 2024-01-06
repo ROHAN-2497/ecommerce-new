@@ -5,12 +5,14 @@ export const metadata = {
   };
 
 
-const AddproDuct = () => {
+
+
+const AddProduct = () => {
     return (
         <div>
-            <h1>AddProduct</h1>
+            <h1 className='text-center'>AddProduct</h1>
         </div>
     );
 };
 
-export default AddproDuct;
+export default AddProduct;
