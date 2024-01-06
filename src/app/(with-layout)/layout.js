@@ -1,11 +1,10 @@
-import NavBar from "@/components/NavBar/page";
-import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import React from "react";
 
 const WithLayout = ({ children }) => {
   return (
     <div>
-     <NavBar />
+     <Navbar/>
       {children}
       <footer>Footer</footer>
     </div>
