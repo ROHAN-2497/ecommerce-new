@@ -1,8 +1,12 @@
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "400", "500", "700"],
+  variable: "--font-roboto",
+});
 
 export const metadata = {
   title: "Home || Next App",
@@ -13,7 +17,7 @@ export default function RootLayout({ children }) {
   console.log("from RootLayout");
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${roboto.variable}font-roboto`}>{children}</body>
     </html>
   );
 }

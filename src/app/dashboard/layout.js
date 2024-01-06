@@ -8,7 +8,7 @@ export const metadata = {
 const DashBoardLayout = ({ children }) => {
   return (
     <div>
-      <div className="flex container mx-auto" >
+      <div className="flex container mx-auto">
         <SideBar />
         {children}
       </div>
