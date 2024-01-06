@@ -13,14 +13,7 @@ export default function RootLayout({ children }) {
   console.log("from RootLayout");
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-        </nav>
-        {children}
-        <footer>Footer</footer>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
