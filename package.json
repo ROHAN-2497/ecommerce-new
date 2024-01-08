@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "server" : "json-server --watch scr/db.json --port 5000"
+    "lint": "next lint"
+  
   },
   "dependencies": {
     "json-server": "^1.0.0-alpha.13",
