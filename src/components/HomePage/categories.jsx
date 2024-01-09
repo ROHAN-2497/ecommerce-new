@@ -7,7 +7,7 @@ const Categories = async () => {
   return (
     <div>
       <h1>Categories</h1>
-      <div className="container mx-auto grid grid-cols-1">
+      <div className="container mx-auto gap-4  grid grid-cols-4">
         {" "}
         {categories.map((category) => (
           <SingleCategory
