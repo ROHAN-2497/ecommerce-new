@@ -14,9 +14,12 @@ const ManageProducts = ({ products }) => {
           </tr>
         </thead>
         <tbody>
-            {
-                products.map((product) => <ManageSingleProduct key={product.id} product={product}></ManageSingleProduct>)
-            }
+          {products.map((product) => (
+            <ManageSingleProduct
+              key={product.id}
+              product={product}
+            ></ManageSingleProduct>
+          ))}
         </tbody>
       </table>
     </div>
