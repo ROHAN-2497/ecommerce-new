@@ -3,15 +3,13 @@ import { request } from "express";
 import { NextResponse } from "next/server";
 
 export const GET = (request) => {
-  // console.log(request.cookies.get(""), request.headers.get(""))
-  const { searchParams } = new URL(request.url);
-  const categoryId = seearchParams.get("categoryId");
-
-  let products = db.products;
-  if (categoryId) {
-    products = products.filter((product) => product.categoryId == +categoryId);
+  products = db.products.find((product) => product.id == +id);
+  {
+    if (product) {
+      return NextResponse.json(products);
+    }
+    return NextResponse.json(products);
   }
-  return NextResponse.json(products);
 };
 
 export const POST = async (request) => {
