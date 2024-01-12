@@ -1,7 +1,6 @@
 import db from "@/db.json";
 import { request } from "express";
 import { NextResponse } from "next/server";
-import { Result } from "postcss";
 
 export const GET = (request) => {
   // console.log(request.cookies.get(""), request.headers.get(""))
