@@ -8,7 +8,12 @@ export const GET = (request) => {
     if (product) {
       return NextResponse.json(products);
     }
-    return NextResponse.json(products);
+    return NextResponse.json(
+      {
+        message: "product not found",
+      },
+      { status: 404 }
+    );
   }
 };
 
