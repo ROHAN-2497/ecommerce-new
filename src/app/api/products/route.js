@@ -17,8 +17,21 @@ export const GET = (request) => {
   }
 };
 
-export const POST = async (request) => {
+export const PATCH = async (request, { params }) => {
   const body = await request.json();
-  db.products.push(body);
-  return NextResponse.json(products);
+  const index = db.products.findindex((product) => product.id === +params.id);
+  db.products[index] = { ...db.products[index], ...body };
+
+  return NextResponse.json({
+    message: "product updated successfully",
+  });
+};
+
+export const DELETE = (request, { params }) => {
+  db.products = db.products.filter((product) => product.id == +params.id);
+  {
+    return NextResponse.json({
+      message: "product delete Successfully",
+    });
+  }
 };
